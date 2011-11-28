@@ -1,0 +1,91 @@
+<div class="container" id="main">
+  <!-- Hero
+  ================================================== -->
+  <div class="hero-unit small-unit">
+    <h1>Togglr <small>Simple Web Application for Your Life and Health.</small></h1>
+    <p><%= current_user.name %>, Welcome!<br/>
+	Just toggle and share! Togglr allows you to share your ON or OFF status with Twitter.</p>
+  </div>
+
+  <!-- Row
+  ================================================== -->
+  <div class="row">
+    <div class="span8">
+      <h2>Toggle and Share</h2>
+	
+      <div class="well square" style="margin-top:10px; padding:5px;" id="message_form">
+      <form accept-charset="UTF-8" action="#" method="POST" class="form-stacked">
+        <fieldset>
+          <div class="clearfix">
+            <label for="toggle" style="margin:5px 0px">Toggle</label>
+			<div class="row">
+			    <div class="span2">
+            	  <div class="input">
+	              <% status = Status.last(:conditions => {:uid => session[:user_id]})
+	                 if status.nil? || status.offon == "off" then
+		               prev_toggle_checked = ""
+	                 else
+		               prev_toggle_checked = "checked" 
+		             end
+		          %>
+              	  <p class="toggle"><input type="checkbox" id="toggle" name="toggle" <%= prev_toggle_checked %>/></p>
+            	  </div>
+				</div>
+				<div class="span5" style="padding-top:7px">
+				  <span id="toggle_message">Toggle or Stay?</span>
+				</div>
+			</div>
+          </div><!-- /clearfix -->
+          <div class="clearfix">
+            <label for="optional_message" style="margin:3px 0px">Message</label>
+            <div class="input">
+              <textarea class="span7" cols="40" id="optional_message" name="optional_message" rows="3" placeholder="Optional."></textarea>
+              <span class="help-block">character left: <strong><span id="count_left"></span></strong></span>
+            </div>
+          </div><!-- /clearfix -->
+          <div class="" style="margin:15px 0px">
+            <input class="btn primary large" id="send" type="submit" value="Toggle and Share" onClick="sendMessage()" />&nbsp;&nbsp;&nbsp;<strong>@<%= current_user.screen_name %></strong>
+         </div>
+        </fieldset>
+      </form>
+      </div>
+
+	  <div class="alert-message success fade in" data-alert="alert" id="success" style="display:none" >
+		<a class="close" href="#">&times;</a>
+		<p><strong>Awesome!</strong> You successfully toggled your life!</p>
+	  </div>
+
+	  <div class="alert-message error fade in" data-alert="alert" id="error" style="display:none" >
+		<a class="close" href="#">&times;</a>
+		<p><strong>Oops!</strong> Sending your message was failed. Please try again.</p>
+	  </div>
+
+    </div><!-- /span8 -->
+    <div class="span8">
+      <h2>Your Toggle</h2>
+      <div class="row">
+        <div class="span4" id="your_toggle">
+		<%= render :partial => 'shared/your_toggle' %>
+        </div>
+	    <div class="span4">
+		  <div class="small-padding" style="text-align:right;">
+		    <p><%= link_to signout_path, :class => "btn small" do %>Sign Out &raquo;<% end %>
+			<span class="help-block">Come back anytime.</span></p>
+		  </div>
+		</div>
+      </div>
+      <div class="page-header"></div>
+    
+      <h2>Trends</h2>
+      <div id="trends">
+	  <%= render :partial => 'shared/trends' %>
+	  </div>
+
+      <h2>Share</h2>
+	  <%= render 'shared/share_buttons' %>
+    </div><!-- //class="span8" -->
+  </div>
+
+  <%= render 'shared/footer' %>
+
+</div>

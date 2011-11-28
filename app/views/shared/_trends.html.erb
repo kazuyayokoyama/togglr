@@ -1,0 +1,13 @@
+  <% 
+    users_count = User.count(:all)
+    toggles_count = Status.all.count
+    toggles_on_count = Status.count(:conditions => {:offon => 'on'})
+    toggles_off_count = Status.count(:conditions => {:offon => 'off'})
+  %>
+  <div class="small-padding">	
+    <blockquote>	
+    <p class="quote-padding"><%= users_count %> users are now Toggling.</p>
+	<p class="quote-padding">Total Toggles: <%= toggles_count %></p>
+    <p>ON: <%= toggles_on_count %> / OFF: <%= toggles_off_count %></p>
+    </blockquote>
+  </div>

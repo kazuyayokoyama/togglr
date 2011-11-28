@@ -1,0 +1,11 @@
+<% 
+  your_toggles_count = Status.count(:conditions => {:uid => session[:user_id]})
+  your_toggles_on_count = Status.count(:conditions => {:uid => session[:user_id], :offon => "on"})
+  your_toggles_off_count = Status.count(:conditions => {:uid => session[:user_id], :offon => "off"})
+%>
+	      <div class="small-padding">
+	      <blockquote>
+	        <p class="quote-padding">Your Total Toggles: <strong><%= your_toggles_count %></strong></p>
+	        <p>ON: <strong><%= your_toggles_on_count %></strong> / OFF: <strong><%= your_toggles_off_count %></strong></p>
+	      </blockquote>
+	      </div>

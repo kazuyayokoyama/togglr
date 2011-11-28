@@ -1,0 +1,51 @@
+<div class="container" id="main">
+  <!-- Hero
+  ================================================== -->
+  <div class="hero-unit">
+    <h1>Togglr <small>Simple Web Application for Your Life and Health.</small></h1>
+    <p>Hi! Are you ON the job now? Is it your day OFF today?<br/>
+    Togglr allows you to share your ON or OFF status with Twitter.
+    Toggle between ON &amp; OFF in your life!<br/>
+    Don't overwork, don't waste time. Toggle and keep you healthy.</p>
+    <p><%= link_to "/auth/twitter", :class => "btn primary large" do %>Sign in with Twitter &raquo;<% end %></p>
+  </div>
+
+  <!-- Row
+  ================================================== -->
+  <div class="row">
+    <div class="span8">
+      <h2>What's Togglr?</h2>   
+      <div>
+        <dl>
+          <dt>ON &amp; OFF</dt>
+          <dd>Sometimes you're very busy in your office -- ON. Sometimes you can relax and play with your children at home -- OFF. When does the change happen? You toggle between the two status, ON &amp; OFF, without thinking everyday.</dd>
+          <dt>Toggle and Share</dt>
+          <dd>To make clear the ON &amp; OFF in your life, Togglr allows you to share the two status with Twitter. Before working in your office, just turn the switch ON. Before sitting on the edge of a couch, just OFF.	
+          <div class="small-padding">
+            <div class="toggle_demo">
+              <input type="checkbox" id="toggle_demo" />
+            </div>
+            <div id="status" style="margin-top:10px">&nbsp;</div>
+          </div>
+          </dd>
+        </dl>
+      </div>
+
+    </div>
+    <div class="span8">
+      <h2>How does it work?</h2>
+      <div class="small-padding">
+        <p>This web application is built on top of lots of innovations. It's powered by <a href="http://rubyonrails.org/">Ruby on Rails</a>, <a href="http://www.heroku.com/">Heroku</a>, <a href="http://twitter.github.com/bootstrap/">Bootstrap, from Twitter</a>, <a href="https://github.com/dnagir/ios-checkboxes">ios-checkboxes</a> and <a href="http://twitter.com/">Twitter</a>. They allow us to develop it easily and quickly!</p>
+      </div>
+    
+      <h2>Trends</h2>
+	  <%= render 'shared/trends' %>
+
+      <h2>Share</h2>
+	  <%= render 'shared/share_buttons' %>
+    </div><!-- //class="span8" -->
+  </div>
+
+  <%= render 'shared/footer' %>
+
+</div>

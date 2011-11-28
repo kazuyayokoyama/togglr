@@ -1,0 +1,87 @@
+body {
+    position: relative;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+dt {
+    margin-top: 20px;
+    border-left: 7px solid #CCCCCC;
+    padding-left: 12px;
+}
+
+dd {
+    margin-top: 7px;
+}
+
+table .top {
+    background-color:#f9f9f9;
+}
+
+.hero-unit {
+	padding: 45px;
+}
+
+.small-unit {
+	padding: 10px 45px;
+}
+
+.quote-padding {
+	padding: 0px 0px 7px 0px;
+}
+
+.hero-unit p{
+	margin-top: 15px;
+}
+
+.well {
+	padding: 10px 0px;
+	background-color:#fcfcfc;
+}
+
+.section {
+    margin-top: 25px;
+}
+
+.message p, dl {
+    font-size: 14px;
+    line-height: 180%;
+}
+
+.footer {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align:center;
+}
+
+.footer-divider {
+    margin-top: 10px;
+}
+
+.share, .small-padding {
+    margin: 10px;
+}
+
+.iPhoneCheckContainer label, .iOSCheckContainer label {
+	text-align:left;
+}
+
+.toggle_demo {
+	margin-top: 5px;
+}
+
+form .counter {
+	color:#bfbfbf;
+}
+
+form .warning {
+	color:#c09853;
+}
+
+form .exceeded {
+	color:#b94a48;
+}
+
+#main {
+	margin: 0 auto;
+    padding-top: 20px;
+}
