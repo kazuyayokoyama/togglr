@@ -26,11 +26,11 @@ You can try it with your Twitter account.
 
 This web application is built on top of lots of innovations. 
 It's powered by below.
-  - Ruby on Rails	 		http://rubyonrails.org/
-  - Heroku 					http://www.heroku.com/
+  - Ruby on Rails           http://rubyonrails.org/
+  - Heroku                  http://www.heroku.com/
   - Bootstrap, from Twitter http://twitter.github.com/bootstrap/
-  - ios-checkboxes 			https://github.com/dnagir/ios-checkboxes
-  - Twitter 				http://twitter.com/
+  - ios-checkboxes          https://github.com/dnagir/ios-checkboxes
+  - Twitter                 http://twitter.com/
 They allow us to develop it easily and quickly!
 
 
