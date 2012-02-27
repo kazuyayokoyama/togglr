@@ -6,7 +6,7 @@ $(window).load(function() {
   var prefix_msg_on = "ON: ";
   var prefix_msg_off = "OFF: ";
   var prefix_msg = prefix_msg_on;
-  var postfix_msg = " #togglr bit.ly/toggling";
+  var postfix_msg = " #togglr http://bit.ly/togglrnow";
   var default_msg = "I just toggled!";
   var span_count_left = $("#count_left");
   var textarea_optional_message = $("#optional_message");
